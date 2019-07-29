@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <BorderPane prefHeight="269.0" prefWidth="409.0">
+         <right>
+            <RadioButton fx:id="InMemoryButton" mnemonicParsing="false" onAction="#wahlRepository" prefHeight="47.0" prefWidth="152.0" text="InMemoryButton" textFill="#159026" BorderPane.alignment="CENTER">
+               <toggleGroup>
+                  <ToggleGroup fx:id="FirstButtonGroup" />
+               </toggleGroup>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </RadioButton>
+         </right>
+         <center>
+            <RadioButton fx:id="InFileButton" mnemonicParsing="false" onAction="#wahlRepository" prefHeight="73.0" prefWidth="128.0" text="InFileButton" textFill="#4a14ae" toggleGroup="$FirstButtonGroup" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </RadioButton>
+         </center>
+         <!--<center>-->
+            <!--<RadioButton fx:id="InDatabaseButton" mnemonicParsing="false" onAction="#wahlRepository" prefHeight="73.0" prefWidth="128.0" text="InDatabaseButton" textFill="#4a14ae" toggleGroup="$FirstButtonGroup" BorderPane.alignment="CENTER">-->
+               <!--<font>-->
+                  <!--<Font size="15.0" />-->
+               <!--</font>-->
+            <!--</RadioButton>-->
+         <!--</center>-->
+         <top>
+            <Label prefHeight="75.0" prefWidth="206.0" text="Wähle dein Repository" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Verdana Bold" size="15.0" />
+               </font>
+            </Label>
+         </top>
+         <bottom>
+            <RadioButton fx:id="InDatabaseButton" mnemonicParsing="false" onAction="#wahlRepository" prefHeight="73.0" prefWidth="128.0" text="InDatabaseButton" textFill="#4a14ae" toggleGroup="$FirstButtonGroup" BorderPane.alignment="CENTER" />
+         </bottom>
+      </BorderPane>
+   </children>
+</GridPane>

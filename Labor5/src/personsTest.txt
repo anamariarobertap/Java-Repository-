@@ -1,0 +1,14 @@
+2,Maria,Meyer,Munich,Entwickler,2,14.5,6
+3,Georg,Yuruz,Stuttgart,Tester,1,7.5,8
+4,Marcel,Hewitt,London,TeamLeader,4,20.0,8
+5,Nicole,Schwarz,Paris,ProjectManager,1,18.5,8
+6,Peter,Johnson,Klausenburg,Entwickler,3,12.5,8
+7,Maria,Meyer,Munich,Entwickler,2,14.5,6
+8,Georg,Yuruz,Stuttgart,Tester,1,7.5,8
+9,Marcel,Hewitt,London,TeamLeader,4,20.0,8
+10,Nicole,Schwarz,Paris,ProjectManager,1,18.5,8
+11,Peter,Johnson,Klausenburg,Entwickler,3,12.5,8
+12,Maria,Meyer,Munich,Entwickler,2,14.5,6
+13,Georg,Yuruz,Stuttgart,Tester,1,7.5,8
+14,Marcel,Hewitt,London,TeamLeader,4,20.0,8
+15,Nicole,Schwarz,Paris,ProjectManager,1,18.5,8

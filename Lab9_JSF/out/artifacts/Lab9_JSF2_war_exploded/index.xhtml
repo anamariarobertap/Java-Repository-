@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+        xmlns:h="http://xmlns.jcp.org/jsf/html"
+        xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:c="http://java.sun.com/jsp/jstl/core">
+<h:head></h:head>
+<h:body>
+    <h:form>
+        <f:view>
+<h:panelGrid id="panelGrid" columns="4" rows="4"
+             border="2" cellpadding = "30" cellspacing="50" bgcolor="#e8f7f6"
+             style="width: fit-content; height: fit-content; border-color: aquamarine; border-width: thick;
+             position: absolute; margin:auto; top:0; bottom:0; left:0; right:0;">
+   <c:forEach var="i" begin="0" end="3">
+      <c:forEach var="j" begin="0" end="3">
+         <h:outputText style="color: black; font-size: xx-large;" value="#{createMatrix.matrix[i][j]}" >
+
+         </h:outputText>
+      </c:forEach>
+   </c:forEach>
+</h:panelGrid>
+
+         Press a Button:
+         <p></p>
+         <h:commandButton value="Up" style="border-color: aqua; margin: auto; text-align: justify-all;width: 70px; height: 30px;">
+            <f:ajax event="click" render="panelGrid" listener="#{manageMatrix.moveUp}" />
+             <f:ajax event="click" render="output" />
+             <f:ajax event="click" render="output1" />
+         </h:commandButton>
+
+         <h:commandButton value="Down" style="border-color: aqua; margin: auto; text-align: justify-all;width: 70px; height: 30px;">
+            <f:ajax event="click" render="panelGrid output output1" listener="#{manageMatrix.moveDown}" />
+         </h:commandButton>
+
+         <h:commandButton value="Left" style="border-color: aqua; margin: auto; text-align: justify-all;width: 70px; height: 30px;">
+            <f:ajax event="click" render="panelGrid output output1" listener="#{manageMatrix.moveLeft}" />
+         </h:commandButton>
+
+         <h:commandButton value="Right" style="border-color: aqua; margin: auto; text-align: justify-all;width: 70px; height: 30px;">
+            <f:ajax event="click" render="panelGrid output output1" listener="#{manageMatrix.moveRight}" />
+
+             <h:commandButton value="Start" style="border-color: aqua; margin: auto; text-align: justify-all; width: 70px; height: 30px;" >
+                 <f:ajax event="click" render="panelGrid output output1" listener="#{manageMatrix.generatFirstBoard}" />
+             </h:commandButton>
+         </h:commandButton>
+
+         <pre>
+               <h:outputLabel id="output" value="#{manageMatrix.out}"/>
+         </pre>
+            <pre>
+               <h:outputLabel id="output1" value="#{manageMatrix.out1}"/>
+         </pre>
+
+        </f:view>
+   </h:form>
+</h:body>
+</html>
